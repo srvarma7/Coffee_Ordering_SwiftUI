@@ -11,11 +11,26 @@ import CoreData
 class CoreDataManager {
     
     static let instance = CoreDataManager(moc: NSManagedObjectContext.currentContect)
-    
     var managedObjContext: NSManagedObjectContext
     
     private init(moc: NSManagedObjectContext) {
         managedObjContext = moc
+    }
+}
+
+extension CoreDataManager {
+    
+    func fetchAllOrders() -> [Order] {
+        var orders = [Order]()
+        let orderFetchReq: NSFetchRequest<Order> = Order.fetchRequest()
+        
+        do {
+            orders = try managedObjContext.fetch(orderFetchReq)
+        } catch let error as NSError {
+            print(error)
+        }
+        
+        return orders
     }
     
     func saveOrder(name: String, type: String) {
@@ -29,5 +44,4 @@ class CoreDataManager {
             print(error)
         }
     }
-    
 }
