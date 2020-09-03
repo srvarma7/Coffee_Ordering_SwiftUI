@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
     
@@ -14,6 +15,13 @@ struct ContentView: View {
     
     init() {
         ordersVM = AllOdersViewModal()
+    }
+    
+    func delete(indexSet: IndexSet) {
+        indexSet.forEach { index in
+            let order = ordersVM.orders[index]
+            ordersVM.deleteOrders(name: order.name)
+        }
     }
     
     var body: some View {
@@ -33,6 +41,9 @@ struct ContentView: View {
                             .padding([.leading], 10)
                     }
                 }
+                .onDelete(perform: { indexSet in
+                    delete(indexSet: indexSet)
+                })
             }
             .sheet(isPresented: $showAddView, onDismiss: {
                 self.ordersVM.fetchOrders()

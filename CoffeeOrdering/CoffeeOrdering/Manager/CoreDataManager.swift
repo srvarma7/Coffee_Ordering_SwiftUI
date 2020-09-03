@@ -20,6 +20,34 @@ class CoreDataManager {
 
 extension CoreDataManager {
     
+    private func fetchSpecificOrder(name: String) -> Order? {
+        
+        var orders = [Order]()
+        let orderFetchReq: NSFetchRequest<Order> = Order.fetchRequest()
+        orderFetchReq.predicate = NSPredicate(format: "name == %@", name)
+        
+        do {
+            orders = try managedObjContext.fetch(orderFetchReq)
+        } catch let error as NSError {
+            print(error)
+        }
+        
+        return orders.first
+    }
+    
+    func deleteOrder(name: String) {
+        
+        do {
+            if let order = fetchSpecificOrder(name: name) {
+                self.managedObjContext.delete(order)
+                try self.managedObjContext.save()
+            }
+        } catch let error as NSError {
+            debugPrint(error)
+        }
+        
+    }
+    
     func fetchAllOrders() -> [Order] {
         var orders = [Order]()
         let orderFetchReq: NSFetchRequest<Order> = Order.fetchRequest()
