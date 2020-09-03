@@ -28,28 +28,24 @@ struct ContentView: View {
       
         NavigationView {
             List {
-                ForEach(self.ordersVM.orders, id: \.name) { order in
-                    HStack {
-                        Image(order.type)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 50, height: 50, alignment: .center)
-                            .cornerRadius(50)
-                        
-                        Text(order.name)
-                            .font(.title)
-                            .padding([.leading], 10)
+                if self.ordersVM.orders.count == 0 {
+                    EmptyOrdersView()
+                } else {
+                    ForEach(self.ordersVM.orders, id: \.name) { order in
+                        OrderCellView(name: order.name, type: order.type)
                     }
+                    .onDelete(perform: { indexSet in
+                        delete(indexSet: indexSet)
+                    })
                 }
-                .onDelete(perform: { indexSet in
-                    delete(indexSet: indexSet)
-                })
             }
-            .sheet(isPresented: $showAddView, onDismiss: {
-                self.ordersVM.fetchOrders()
-            }, content: {
-                AddOrderView(isPresented: $showAddView)
-            })
+                .sheet(isPresented: $showAddView,
+                       onDismiss: {
+                            self.ordersVM.fetchOrders()
+                        }, content: {
+                            AddOrderView(isPresented: $showAddView)
+                        }
+                )
             .navigationTitle("Coffee Orders")
             .navigationBarItems(trailing: Button("Add Order") {
                 self.showAddView = true

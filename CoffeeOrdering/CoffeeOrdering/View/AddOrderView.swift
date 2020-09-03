@@ -20,7 +20,7 @@ struct AddOrderView: View {
                 
                 Picker("Select coffee", selection: $addOrderVM.type, content: {
                     Text("Regular").tag("reg")
-                    Text("Cappicino").tag("cap")
+                    Text("cappuccino").tag("cap")
                     Text("Espresso").tag("esc")
                 }).pickerStyle(SegmentedPickerStyle())
                 .padding()

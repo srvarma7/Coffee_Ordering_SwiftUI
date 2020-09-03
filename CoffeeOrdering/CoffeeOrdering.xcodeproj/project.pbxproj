@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		808DD92225018D6900CF8BC2 /* OrderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DD92125018D6900CF8BC2 /* OrderCellView.swift */; };
+		808DD92425019ACA00CF8BC2 /* EmptyOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DD92325019ACA00CF8BC2 /* EmptyOrdersView.swift */; };
 		80E2FB402500B01E00CFB09A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E2FB3F2500B01E00CFB09A /* AppDelegate.swift */; };
 		80E2FB422500B01E00CFB09A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E2FB412500B01E00CFB09A /* SceneDelegate.swift */; };
 		80E2FB442500B01E00CFB09A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E2FB432500B01E00CFB09A /* ContentView.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		808DD92125018D6900CF8BC2 /* OrderCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCellView.swift; sourceTree = "<group>"; };
+		808DD92325019ACA00CF8BC2 /* EmptyOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyOrdersView.swift; sourceTree = "<group>"; };
 		80E2FB3C2500B01E00CFB09A /* CoffeeOrdering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeOrdering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E2FB3F2500B01E00CFB09A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80E2FB412500B01E00CFB09A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				80E2FB602500B87300CFB09A /* AddOrderView.swift */,
+				808DD92125018D6900CF8BC2 /* OrderCellView.swift */,
+				808DD92325019ACA00CF8BC2 /* EmptyOrdersView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,7 +208,9 @@
 				80E2FB632500BF2000CFB09A /* AllOdersViewModal .swift in Sources */,
 				80E2FB422500B01E00CFB09A /* SceneDelegate.swift in Sources */,
 				80E2FB612500B87300CFB09A /* AddOrderView.swift in Sources */,
+				808DD92225018D6900CF8BC2 /* OrderCellView.swift in Sources */,
 				80E2FB592500B1D700CFB09A /* CoreDataManager.swift in Sources */,
+				808DD92425019ACA00CF8BC2 /* EmptyOrdersView.swift in Sources */,
 				80E2FB442500B01E00CFB09A /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
