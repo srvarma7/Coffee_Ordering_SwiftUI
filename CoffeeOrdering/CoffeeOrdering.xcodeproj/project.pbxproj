@@ -14,6 +14,8 @@
 		80E2FB492500B02000CFB09A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80E2FB482500B02000CFB09A /* Assets.xcassets */; };
 		80E2FB4C2500B02000CFB09A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80E2FB4B2500B02000CFB09A /* Preview Assets.xcassets */; };
 		80E2FB4F2500B02000CFB09A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E2FB4D2500B02000CFB09A /* LaunchScreen.storyboard */; };
+		80E2FB592500B1D700CFB09A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E2FB582500B1D700CFB09A /* CoreDataManager.swift */; };
+		80E2FB5C2500B2B200CFB09A /* NSManagedObjectContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E2FB5B2500B2B200CFB09A /* NSManagedObjectContext+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		80E2FB4B2500B02000CFB09A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		80E2FB4E2500B02000CFB09A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80E2FB502500B02000CFB09A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80E2FB582500B1D700CFB09A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		80E2FB5B2500B2B200CFB09A /* NSManagedObjectContext+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,9 @@
 		80E2FB3E2500B01E00CFB09A /* CoffeeOrdering */ = {
 			isa = PBXGroup;
 			children = (
+				80E2FB5A2500B27500CFB09A /* Extensions */,
+				80E2FB572500B0FD00CFB09A /* View */,
+				80E2FB562500B0EE00CFB09A /* Manager */,
 				80E2FB3F2500B01E00CFB09A /* AppDelegate.swift */,
 				80E2FB412500B01E00CFB09A /* SceneDelegate.swift */,
 				80E2FB432500B01E00CFB09A /* ContentView.swift */,
@@ -76,6 +83,29 @@
 				80E2FB4B2500B02000CFB09A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		80E2FB562500B0EE00CFB09A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				80E2FB582500B1D700CFB09A /* CoreDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		80E2FB572500B0FD00CFB09A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		80E2FB5A2500B27500CFB09A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				80E2FB5B2500B2B200CFB09A /* NSManagedObjectContext+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +179,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				80E2FB402500B01E00CFB09A /* AppDelegate.swift in Sources */,
+				80E2FB5C2500B2B200CFB09A /* NSManagedObjectContext+Extension.swift in Sources */,
 				80E2FB472500B01E00CFB09A /* CoffeeOrdering.xcdatamodeld in Sources */,
 				80E2FB422500B01E00CFB09A /* SceneDelegate.swift in Sources */,
+				80E2FB592500B1D700CFB09A /* CoreDataManager.swift in Sources */,
 				80E2FB442500B01E00CFB09A /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
