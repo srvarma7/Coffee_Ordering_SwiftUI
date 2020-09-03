@@ -18,6 +18,7 @@
 		80E2FB5C2500B2B200CFB09A /* NSManagedObjectContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E2FB5B2500B2B200CFB09A /* NSManagedObjectContext+Extension.swift */; };
 		80E2FB5F2500B7F200CFB09A /* AddOrderViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E2FB5E2500B7F200CFB09A /* AddOrderViewModal.swift */; };
 		80E2FB612500B87300CFB09A /* AddOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E2FB602500B87300CFB09A /* AddOrderView.swift */; };
+		80E2FB632500BF2000CFB09A /* AllOdersViewModal .swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E2FB622500BF2000CFB09A /* AllOdersViewModal .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		80E2FB5B2500B2B200CFB09A /* NSManagedObjectContext+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extension.swift"; sourceTree = "<group>"; };
 		80E2FB5E2500B7F200CFB09A /* AddOrderViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewModal.swift; sourceTree = "<group>"; };
 		80E2FB602500B87300CFB09A /* AddOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderView.swift; sourceTree = "<group>"; };
+		80E2FB622500BF2000CFB09A /* AllOdersViewModal .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllOdersViewModal .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		80E2FB5D2500B7C900CFB09A /* View Modal */ = {
 			isa = PBXGroup;
 			children = (
+				80E2FB622500BF2000CFB09A /* AllOdersViewModal .swift */,
 				80E2FB5E2500B7F200CFB09A /* AddOrderViewModal.swift */,
 			);
 			path = "View Modal";
@@ -196,6 +199,7 @@
 				80E2FB5C2500B2B200CFB09A /* NSManagedObjectContext+Extension.swift in Sources */,
 				80E2FB472500B01E00CFB09A /* CoffeeOrdering.xcdatamodeld in Sources */,
 				80E2FB5F2500B7F200CFB09A /* AddOrderViewModal.swift in Sources */,
+				80E2FB632500BF2000CFB09A /* AllOdersViewModal .swift in Sources */,
 				80E2FB422500B01E00CFB09A /* SceneDelegate.swift in Sources */,
 				80E2FB612500B87300CFB09A /* AddOrderView.swift in Sources */,
 				80E2FB592500B1D700CFB09A /* CoreDataManager.swift in Sources */,
