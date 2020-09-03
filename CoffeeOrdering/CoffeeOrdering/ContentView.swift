@@ -21,7 +21,6 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(self.ordersVM.orders, id: \.name) { order in
-
                     HStack {
                         Image(order.type)
                             .resizable()
@@ -30,15 +29,19 @@ struct ContentView: View {
                             .cornerRadius(50)
                         
                         Text(order.name)
-                            .font(.largeTitle)
+                            .font(.title)
                             .padding([.leading], 10)
                     }
                 }
             }
-            
+            .sheet(isPresented: $showAddView, onDismiss: {
+                self.ordersVM.fetchOrders()
+            }, content: {
+                AddOrderView(isPresented: $showAddView)
+            })
             .navigationTitle("Coffee Orders")
             .navigationBarItems(trailing: Button("Add Order") {
-                
+                self.showAddView = true
             })
         }
         
